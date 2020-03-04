@@ -32,7 +32,12 @@ Install the ros dependencies,
 cd ~/catkin_ws
 rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 ```
-
+If above gives you 'can't locate libraspberrypi0' error, try: 
+```
+ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y --skip-keys libraspberrypi0 --skip-keys libraspberrypi-dev
+ ```
+ instead. 
+ 
 Compile the code with `catkin_make`.
 
 ## Running the Node
